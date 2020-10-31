@@ -1,4 +1,5 @@
 import react, { Component } from "react";
+import { FaPlus } from "react-icons/fa";
 
 class AddAppointments extends Component {
   render() {
@@ -9,7 +10,11 @@ class AddAppointments extends Component {
           (this.props.formDisplay ? "" : " add-appointment")
         }
       >
-        <div className="apt-addheading card-header bg-primary text-white">
+        <div
+          className="apt-addheading card-header bg-primary text-white"
+          onClick={this.props.toggleForm}
+        >
+          <FaPlus />
           Add Appointment
         </div>
 
