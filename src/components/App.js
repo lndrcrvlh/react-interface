@@ -1,24 +1,34 @@
 import React, { Component } from "react";
 import "../css/App.css";
+import AddAppointments from "./AddAppointments";
+import SearchAppointments from "./SearchAppointments";
+import ListAppointments from "./ListAppointments";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      myName: "bobby fisher",
+    };
+  }
+  render() {
+    return (
+      <main className="page bg-white" id="petratings">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 bg-white">
+              <div className="container">
+                {this.state.myName}
+                <AddAppointments />
+                <SearchAppointments />
+                <ListAppointments />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
 }
 
 export default App;
